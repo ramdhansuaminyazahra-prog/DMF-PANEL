@@ -22,10 +22,9 @@ jobs:
           unzip "DMF PANEL APK.zip" -d dmfpanel
 
       - name: Build APK
-        run: |
-          cd dmfpanel
-          chmod +x gradlew
-          ./gradlew assembleDebug
+  run: |
+    cd dmfpanel
+    gradle assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
