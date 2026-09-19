@@ -20,11 +20,12 @@ jobs:
       - name: Extract project
         run: |
           unzip "DMF PANEL APK.zip" -d dmfpanel
+          ls -la dmfpanel
 
       - name: Build APK
-  run: |
-    cd dmfpanel
-    gradle assembleDebug
+        run: |
+          cd dmfpanel
+          gradle assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
